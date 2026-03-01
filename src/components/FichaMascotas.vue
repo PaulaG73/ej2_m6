@@ -87,4 +87,7 @@ padding-top: 15px;
 .lista-item{
 text-align: start;
 }
+
+
+
 </style>
