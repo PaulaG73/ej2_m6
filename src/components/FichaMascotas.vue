@@ -13,7 +13,8 @@
                         <p class="card-text">Vacunas al día: {{ mascota.vacunado === true ? "Sí" : "No" }}</p>
                         <h6 class="card-text">Características</h6>
                         <ul>
-                            <li v-for="caracteristica, index in mascota.caracteristicas" :key="index" class="lista-item">
+                            <li v-for="caracteristica, index in mascota.caracteristicas" :key="index"
+                                class="lista-item">
                                 {{ caracteristica }}
                             </li>
                         </ul>
@@ -31,18 +32,19 @@ const getImageUrl = (name) => {
     return require(`../assets/img/${name}`);
 }
 const data = [
-    { id: 1, nombre: "Pluma", tipo: "gato", edad: "10 años", vacunado: true, foto: "Leona.jpg", caracteristicas: ["temerosa", "peleadora", "reclamona"] },
-    { id: 2, nombre: "Pelusa", tipo: "gato", edad: "9 años", vacunado: true, foto: "Leona.jpg", caracteristicas: ["tímida", "maternal", "curiosa"] },
-    { id: 3, nombre: "Polvo", tipo: "gato", edad: "8 años", vacunado: true, foto: "Leona.jpg", caracteristicas: ["regalón", "reclamón", "manipulador"] },
-    { id: 4, nombre: "Manchita", tipo: "gato", edad: "8 años", vacunado: true, foto: "Leona.jpg", caracteristicas: ["independiente", "cariñosa", "dormilona"] },
-    { id: 5, nombre: "Nieve", tipo: "gato", edad: "8 años", vacunado: true, foto: "Leona.jpg", caracteristicas: ["regalona", "juguetona", "dormilona"] },
-    { id: 6, nombre: "Dalí", tipo: "gato", edad: "7 años", vacunado: true, foto: "Leona.jpg", caracteristicas: ["hambriento", "temeroso", "regalón"] },
-    { id: 7, nombre: "Gala", tipo: "gato", edad: "7 años", vacunado: true, foto: "Leona.jpg", caracteristicas: ["habladora", "nerviosa", "salvaje"] },
-    { id: 8, nombre: "Nala", tipo: "gato", edad: "6 años", vacunado: true, foto: "Leona.jpg", caracteristicas: ["dulce", "dependiente", "temerosa"] },
-    { id: 9, nombre: "Leona", tipo: "gato", edad: "4 años", vacunado: true, foto: "Leona.jpg", caracteristicas: ["maternal", "exótica", "conversadora"] },
-    { id: 10, nombre: "Mía", tipo: "gato", edad: "3 años", vacunado: true, foto: "Leona.jpg", caracteristicas: ["regañona", "independiente", "ágil"] },
-    { id: 11, nombre: "Tom", tipo: "gato", edad: "2 años", vacunado: true, foto: "Leona.jpg", caracteristicas: ["curioso", "regalón", "juguetón"] },
-    { id: 12, nombre: "Opa", tipo: "perro", edad: "10 años", vacunado: false, foto: "Leona.jpg", caracteristicas: ["hablador", "juguetón", "dormilón"] }
+    { id: 1, nombre: "Dalí", tipo: "gato", edad: "7 años", vacunado: true, foto: "Dalí.jpg", caracteristicas: ["hambriento", "temeroso", "regalón"] },
+    { id: 2, nombre: "Gala", tipo: "gato", edad: "7 años", vacunado: true, foto: "Gala.jpg", caracteristicas: ["habladora", "nerviosa", "salvaje"] },
+    { id: 3, nombre: "Leona", tipo: "gato", edad: "4 años", vacunado: true, foto: "Leona.jpg", caracteristicas: ["maternal", "exótica", "conversadora"] },
+    { id: 4, nombre: "Manchita", tipo: "gato", edad: "8 años", vacunado: true, foto: "Manchita.jpg", caracteristicas: ["independiente", "cariñosa", "dormilona"] },
+    { id: 5, nombre: "Mía", tipo: "gato", edad: "3 años", vacunado: true, foto: "Mía.jpg", caracteristicas: ["regañona", "independiente", "ágil"] },
+    { id: 6, nombre: "Nala", tipo: "gato", edad: "6 años", vacunado: true, foto: "Nala.jpg", caracteristicas: ["dulce", "dependiente", "temerosa"] },
+    { id: 7, nombre: "Nieve", tipo: "gato", edad: "8 años", vacunado: true, foto: "Nieve.jpg", caracteristicas: ["regalona", "juguetona", "dormilona"] },
+    { id: 8, nombre: "Opa", tipo: "perro", edad: "10 años", vacunado: false, foto: "Opa.jpg", caracteristicas: ["hablador", "juguetón", "chistoso"] },
+    { id: 9, nombre: "Pelusa", tipo: "gato", edad: "9 años", vacunado: true, foto: "Pelusa.jpg", caracteristicas: ["tímida", "maternal", "curiosa"] },
+    { id: 10, nombre: "Pluma", tipo: "gato", edad: "10 años", vacunado: true, foto: "Pluma.jpg", caracteristicas: ["temerosa", "peleadora", "reclamona"] },
+    { id: 11, nombre: "Polvo", tipo: "gato", edad: "8 años", vacunado: true, foto: "Polvo.jpg", caracteristicas: ["regalón", "reclamón", "manipulador"] },
+    { id: 12, nombre: "Tom", tipo: "gato", edad: "2 años", vacunado: true, foto: "Tom.jpg", caracteristicas: ["curioso", "regalón", "juguetón"] },
+
 
 ]
 
@@ -56,8 +58,9 @@ const data = [
 
 }
 
-.container{
-padding-top: 15px;
+.container {
+
+    padding-top: 15px;
     gap: 5px;
     display: flex;
     border-radius: 1px;
@@ -72,22 +75,21 @@ padding-top: 15px;
 
 .card-img {
     max-height: 220px;
+    min-width: 165px;
 }
 
 .card-body {
     font-size: small;
     min-height: 200px;
-    min-width: 300px;
+    min-width: 200px;
 }
 
 .card-text {
     padding-left: 10px;
     text-align: start;
 }
-.lista-item{
-text-align: start;
+
+.lista-item {
+    text-align: start;
 }
-
-
-
 </style>
