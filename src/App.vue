@@ -1,17 +1,9 @@
 <template>
  
  <h1>Fundación "Mi Casa"</h1>
- <h3>Ficha de Mascotas</h3>
- <nav class="nav-tabs">
-<button v-for="comp, index in componentes" :key="index"
-@click= "componenteActivo = comp.nombre"
-:class= "['nav-btn', {activo: componenteActivo== comp.nombre}]"
->
-{{ comp.label }}
-</button>
-
- </nav>
- <div class="contenido">
+ <h2>Ficha de Mascotas</h2>
+ 
+ <div>
  <FichaMascotas
  v-if="componenteActivo== `FichaMascotas`"/>
  
@@ -25,8 +17,7 @@ import { ref } from 'vue';
 import FichaMascotas from './components/FichaMascotas.vue';
 
 const componenteActivo = ref ("FichaMascotas")
-const componentes = [
-  {nombre: "FichaMascotas", label: "Listar Mascota"}]
+
 
   
 </script>
@@ -39,5 +30,6 @@ const componentes = [
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
 }
 </style>
